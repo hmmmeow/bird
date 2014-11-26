@@ -11,22 +11,20 @@ public class PlayerController : MonoBehaviour {
 		Quaternion rot = Quaternion.LookRotation (transform.position - mousePosition, Vector3.forward);
 		transform.rotation = rot;
 
-		transform.eulerAngles = new Vector3 (0, 0, transform.eulerAngles.z);
+		transform.eulerAngles = new Vector3 (0, 0, transform.eulerAngles.z-180);
 		rigidbody2D.angularVelocity = 0;
 
-		if (Input.GetKey (KeyCode.W)) {
-						rigidbody2D.AddForce (gameObject.transform.up * speed);
-				}
-			
+				
 	
 	}
 
 
-	void OnTriggerEnter2D(Collider2D other) 
+	void Update()
 	{
-		Destroy (other.gameObject);
-
+		transform.Translate(-Vector2.right * Input.GetAxis("Horizontal") * Time.deltaTime * speed, Space.Self);
+		transform.Translate(-Vector2.up * Input.GetAxis("Vertical") * Time.deltaTime * speed, Space.Self);
 	}
+
 
 
 }

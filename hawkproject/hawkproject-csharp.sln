@@ -17,17 +17,15 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-<<<<<<< HEAD
-<<<<<<< HEAD
-												GlobalSection(MonoDevelopProperties) = preSolution
+													GlobalSection(MonoDevelopProperties) = preSolution
+=======
+					GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> parent of 99786e3... Movement ++
 =======
 					GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> parent of 99786e3... Movement ++
 =======
 						GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> parent of 99786e3... Movement ++
-=======
-							GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> parent of 09ca536... Not working
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
