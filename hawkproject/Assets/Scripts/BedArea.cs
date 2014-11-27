@@ -2,11 +2,13 @@
 using System.Collections;
 using UnityEngine.UI;
 
+//use playerprefs for bed space??
+
 
 public class BedArea : MonoBehaviour {
 
 	public Clipboard clipboard;
-	public static string bedspace;
+	public string bedspace = "0";
 	Text text;
 
 	//public Text newtext;
@@ -28,6 +30,9 @@ public class BedArea : MonoBehaviour {
 		Invoke ("ShowClipboardNow", 0f);
 		text = GetComponent<Text> ();
 		bedspace = text.text;
+		PlayerPrefs.SetString ("bedspace", bedspace);
+		//print ("yes");
+
 	//	Invoke ("NewText", 0f);
 	}
 

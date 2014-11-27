@@ -4,26 +4,27 @@ using UnityEngine.UI;
 
 public class RetrieveClipboardText : MonoBehaviour {
 
-	public BedArea bedarea;
-
 	Text clipboardtext;
-	Text currentclipboard;
-	public string bedspace = "1";
+
+	public string bedspace = "0";
 
 
 	void Awake()
 	{
 		clipboardtext = GetComponent<Text>();
-		currentclipboard = bedarea.GetComponent<Text> ();
-		bedspace = currentclipboard.text;
+		//bedspace = PlayerPrefs.GetString("bedspace");
 	}
 	
 
 	void Update (){
 
+		bedspace = PlayerPrefs.GetString("bedspace");
+
+
 		if (bedspace == "1")
 		{
 			clipboardtext.text = "Patient 1";
+
 		}
 
 		if (bedspace == "2")
