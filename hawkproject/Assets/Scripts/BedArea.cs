@@ -27,13 +27,33 @@ public class BedArea : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D other)
 	{
-		Invoke ("ShowClipboardNow", 0f);
+
+	if (Input.GetKeyDown (KeyCode.Tab))
+		{
+			Invoke ("ShowClipboardNow", 0f);
+		}
+	
+	if (Input.GetMouseButtonDown (0))
+		{
+			//CastRay ();
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
+			
+			if (hit && hit.collider.gameObject.name == "Clipboard") {
+				Invoke ("ShowClipboardNow", 0f);
+				//print ("Hit");
+			} 
+			//else {
+			//	print ("No hit");
+			//}
+
+		}
+
+
 		text = GetComponent<Text> ();
 		bedspace = text.text;
 		PlayerPrefs.SetString ("bedspace", bedspace);
-		//print ("yes");
 
-	//	Invoke ("NewText", 0f);
 	}
 
 
@@ -45,13 +65,39 @@ public class BedArea : MonoBehaviour {
 
 	void ShowClipboardNow()
 	{
-		if (Input.GetKeyDown(KeyCode.Tab))
-		{
+		//if (Input.GetKeyDown(KeyCode.Tab))
+		//{
 			clipboard.ClipboardToggle();
-		}
+		//}
 	}
 
 
+
+	void CastRay() {
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
+		
+		string selection = hit.collider.gameObject.name;
+		
+		if (hit && selection == "Clipboard") {
+			print (selection);
+		} else {
+			print ("No clipboard");
+				}
+
+		
+		//if (hit) {
+		//	print (hit.collider.gameObject.name);
+		//}
+	}
+
+
+	//void Update () {
+	//	if (Input.GetMouseButtonDown(0)) {
+			//print("Pressed left click, casting ray.");
+	//		CastRay();
+	//	}       
+	//}
 
 
 }
