@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class BedArea : MonoBehaviour {
 
+	//public static BedArea bed;
+
 	public Clipboard clipboard;
 	public string bedspace = "0";
 	Text text;
@@ -25,7 +27,7 @@ public class BedArea : MonoBehaviour {
 	//	}
 
 
-	void OnTriggerStay2D(Collider2D other)
+	public void OnTriggerStay2D(Collider2D other)
 	{
 
 	if (Input.GetKeyDown (KeyCode.Tab))

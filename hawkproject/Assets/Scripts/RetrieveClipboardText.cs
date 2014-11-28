@@ -8,16 +8,18 @@ public class RetrieveClipboardText : MonoBehaviour {
 
 	public string bedspace = "0";
 
+	//string bedspace;
 
 	void Awake()
 	{
 		clipboardtext = GetComponent<Text>();
-		//bedspace = PlayerPrefs.GetString("bedspace");
+		bedspace = PlayerPrefs.GetString("bedspace");
 	}
 	
 
 	void Update (){
 
+		//bedspace = BedArea.bed.bedspace;
 		bedspace = PlayerPrefs.GetString("bedspace");
 
 
@@ -33,7 +35,6 @@ public class RetrieveClipboardText : MonoBehaviour {
 		}
 
 
-		//clipboardtext.text = bedarea.newtext.text;
 		
 	}
 
