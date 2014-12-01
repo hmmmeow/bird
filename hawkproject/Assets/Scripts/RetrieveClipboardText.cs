@@ -8,7 +8,7 @@ public class RetrieveClipboardText : MonoBehaviour {
 
 	public string bedspace = "0";
 
-	//string bedspace;
+
 
 	void Awake()
 	{

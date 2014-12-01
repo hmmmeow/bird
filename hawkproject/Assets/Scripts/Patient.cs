@@ -3,8 +3,6 @@ using System.Collections;
 
 public class Patient : MonoBehaviour {
 
-	public string firstName;
-	public string lastName;
 
 	void Randomiser2000() {
 
@@ -17,61 +15,33 @@ public class Patient : MonoBehaviour {
 		}
 
 	void Awake(){
-
-		FirstName ();
-		LastName ();
-		print (firstName + " " + lastName);
-
-		//Invoke ("FirstName", 0f);
-		//Invoke ("LastName", 0f);
-
+		print (getFirstName() + " " + getLastName());
 
 		}
 
-	public void FirstName(){
 
-		int FNmax = 9;
-		string[] patientFName = new string[FNmax];
+	public string getFirstName(){
 
-		patientFName [0] = "Harry";
-		patientFName [1] = "John";
-		patientFName [2] = "Will";
-		patientFName [3] = "Thomas";
-		patientFName [4] = "Charlie";
-		patientFName [5] = "Boris";
-		patientFName [6] = "Dave";
-		patientFName [7] = "Mike";
-		patientFName [8] = "Steven";
+		string[] patientFName = {"Harry","John","Will","Thomas","Charlie","Boris","Dave","Mike","Steven"};
 
-		int randomiser = Random.Range (0, FNmax);
+		int randomiser = Random.Range (0, patientFName.Length);
 
-		firstName = patientFName[randomiser];
-
+		string firstName = patientFName[randomiser];
+		return firstName;
+			
 
 	}
 
 
-	public void LastName(){
+	public string getLastName(){
 
-		int LNmax = 12;
-		string[] patientLName = new string[LNmax];
 
-		patientLName [0] = "Hobart";
-		patientLName [1] = "Smith";
-		patientLName [2] = "Dickinson";
-		patientLName [3] = "Cope";
-		patientLName [4] = "Gilder";
-		patientLName [5] = "Seddon";
-		patientLName [6] = "Swann";
-		patientLName [7] = "Dixon";
-		patientLName [8] = "Gellar";
-		patientLName [9] = "Green";
-		patientLName [10] = "Wright";
-		patientLName [11] = "Jackson";
-
-		int randomiser = Random.Range (0, LNmax);
+		string[] patientLName = {"Hobart","Smith","Dickinson","Cope","Gilder","Seddon","Swann","Dixon","Gellar","Green","Wright","Jackson","Moyes"};
 		
-		lastName = patientLName[randomiser];
+		int randomiser = Random.Range (0, patientLName.Length);
+		
+		string lastName = patientLName[randomiser];
+		return lastName;
 
 		
 	}
