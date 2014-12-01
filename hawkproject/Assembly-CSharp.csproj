@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\Patient.cs" />
+     <Compile Include="Assets\Scripts\PatientDetails.cs" />
      <Compile Include="Assets\Scripts\PauseManager.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\RetrieveClipboardText.cs" />

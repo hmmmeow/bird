@@ -15,12 +15,12 @@ public class Patient : MonoBehaviour {
 		}
 
 	void Awake(){
-		print (getFirstName() + " " + getLastName());
+		print (getRandomFirstName() + " " + getRandomLastName());
 
 		}
 
 
-	public string getFirstName(){
+	public string getRandomFirstName(){
 
 		string[] patientFName = {"Harry","John","Will","Thomas","Charlie","Boris","Dave","Mike","Steven"};
 
@@ -33,7 +33,7 @@ public class Patient : MonoBehaviour {
 	}
 
 
-	public string getLastName(){
+	public string getRandomLastName(){
 
 
 		string[] patientLName = {"Hobart","Smith","Dickinson","Cope","Gilder","Seddon","Swann","Dixon","Gellar","Green","Wright","Jackson","Moyes"};
@@ -47,10 +47,15 @@ public class Patient : MonoBehaviour {
 	}
 
 
-	void patientNames() {
-
+	public string getRandomAge(){
+		
+		
+		int getAge = Random.Range (30, 75);
+		
+		return getAge;
+		
+		
 	}
-
 
 
 
