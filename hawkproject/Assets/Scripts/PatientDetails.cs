@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PatientDetails : MonoBehaviour {
 
-	Patient myPatient;
+	public Patient patient;
 	string firstName;
 	string lastName;
 	int age;
@@ -11,16 +11,17 @@ public class PatientDetails : MonoBehaviour {
 //	Diagnosis<List> diagnosis;
 //	DrugAllergies drugAllergies;
 
-	public void getPatientDetails()
+	public void patientDetails()
 	{
-		Patient myPatient = new Patient();
-		firstName = myPatient.getRandomFirstName();
-		lastName = myPatient.getRandomLastName();
-		age = myPatient.getRandomAge();
+		//Patient myPatient = new Patient();
+		firstName = patient.getRandomFirstName();
+		lastName = patient.getRandomLastName();
+		age = patient.getRandomAge();
 		
 	}
-	
-	void Awake(){
+
+	void Start(){
+		patientDetails ();
 		print (firstName + " " + lastName + " is " + age + " years old");
 		
 	}
