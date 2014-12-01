@@ -14,10 +14,7 @@ public class Patient : MonoBehaviour {
 
 		}
 
-	void Awake(){
-		print (getRandomFirstName() + " " + getRandomLastName());
 
-		}
 
 
 	public string getRandomFirstName(){
@@ -47,7 +44,7 @@ public class Patient : MonoBehaviour {
 	}
 
 
-	public string getRandomAge(){
+	public int getRandomAge(){
 		
 		
 		int getAge = Random.Range (30, 75);
