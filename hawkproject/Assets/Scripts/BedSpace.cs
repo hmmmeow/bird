@@ -3,8 +3,10 @@ using System.Collections;
 
 public class BedSpace : MonoBehaviour
 {
+	public PatientDetails patientdetails;
 	public GameObject[] bedspace;
 	string bedSpaceName;
+
 
 	void Start ()
 	{
@@ -13,7 +15,7 @@ public class BedSpace : MonoBehaviour
 		for(int i = 0; i < bedspace.Length; i++)
 		{
 			bedSpaceName = bedspace[i].guiText.text;
-			bedSpaceName = "Patient " + i;
+			bedSpaceName = "Name: " + patientdetails.patientFullName() + "\n\nAge: " + patientdetails.patientAge();
 			bedspace[i].guiText.text = bedSpaceName;
 			//print(bedspace[i].name + " has the text: " + bedSpaceName);
 			//print(bedspace[i].name + " has the text: " + bedspace[i].guiText.text);
