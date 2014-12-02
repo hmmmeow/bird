@@ -7,12 +7,12 @@ public class Clipboard : MonoBehaviour {
 
 
 //
-	Canvas clipboard;
+	Canvas clipboardCanvas;
 
 	void Start()
 	{
-		clipboard = GetComponent<Canvas>();
-		clipboard.enabled = false;
+		clipboardCanvas = GetComponent<Canvas>();
+		clipboardCanvas.enabled = false;
 	}
 ////
 //
@@ -36,7 +36,7 @@ public class Clipboard : MonoBehaviour {
 //	
 	public void ClipboardToggle()
 	{
-		clipboard.enabled = !clipboard.enabled;
+		clipboardCanvas.enabled = !clipboardCanvas.enabled;
 		//Time.timeScale = Time.timeScale == 0 ? 1 : 0;
 	}
 

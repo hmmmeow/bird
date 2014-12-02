@@ -6,17 +6,16 @@ using UnityEngine.UI;
 public class BedArea : MonoBehaviour {
 
 
-	//public GameObject clipboard;
-	//public Clipboard clipboard;
-	//public Canvas clipboardCanvas;
+	public GameObject clipboardObject;
+	public Canvas clipboardCanvas;
 	string bedspace;
+	bool collision;
+	Text clipboardText;
+	string patientInformation;
 //	Text clipboardtext;
 
-	void Start()
-	{
-		//clipboardCanvas = FindObjectOfType<Canvas> ();
-			//GetComponentInParent<Canvas>();
-		//clipboardCanvas.enabled = false;
+	void Start(){
+		clipboardObject = GameObject.FindGameObjectWithTag ("Clipboard");
 	}
 
 //	string ClipBoardText()
@@ -37,31 +36,62 @@ public class BedArea : MonoBehaviour {
 
 	void ShowClipboard(){
 
-		//clipboard.ClipboardToggle();
-		print (getBedSpace());
+		clipboardCanvas = clipboardObject.GetComponent<Canvas> ();
+		clipboardCanvas.enabled = !clipboardCanvas.enabled;
+
+		clipboardText = clipboardCanvas.GetComponentInChildren<Text> ();
+
+
+		clipboardText.text = getBedSpace();
+//		print (clipboardText.text);
 
 		}
 
 
-	public void OnTriggerStay2D(Collider2D other){
+	public void OnTriggerEnter2D(Collider2D other){
+		collision = true;
+		}
+
+	public void OnTriggerExit2D(Collider2D other){
+		collision = false;
+		}
 
 
-	
-	if (Input.GetMouseButtonDown (0))
-		{
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
+
+
+
+	void Update(){
+
+				if (Input.GetMouseButtonDown (0) && collision) {
 						
-			if (hit.collider.gameObject.name == "Clipboard") {
+						Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+						RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
+						
+					if (hit && hit.collider.gameObject.name == "Clipboard"){
+//						print ("Clipboard selected");
+						ShowClipboard();
+					}
+									
 
-				Invoke("ShowClipboard", 0f);
-
-					} 
-		
+				}
 
 		}
+	
+//	if (Input.GetMouseButtonDown (0))
+//		{
+//			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+//			RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
+//						
+//			if (hit.collider.gameObject.name == "Clipboard") {
+//
+//				Invoke("ShowClipboard", 0f);
+//
+//					} 
+//		
+//
+//		}
 
-	}
+
 
 
 
