@@ -51,7 +51,6 @@
      <Compile Include="Assets\Scripts\Clipboard.cs" />
      <Compile Include="Assets\Scripts\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\PatientCatalogue.cs" />
-     <Compile Include="Assets\Scripts\PatientDetails.cs" />
      <Compile Include="Assets\Scripts\PatientInformationGenerator.cs" />
      <Compile Include="Assets\Scripts\PauseManager.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
