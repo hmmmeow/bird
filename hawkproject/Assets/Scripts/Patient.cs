@@ -4,22 +4,10 @@ using System.Collections;
 public class Patient : MonoBehaviour {
 
 
-	void Randomiser2000() {
-
-		int randomiser = Random.Range (0, 10);
-
-		if (randomiser != 5) {
-			print (randomiser);
-				} 
-
-		}
-
-
-
 
 	public string getRandomFirstName(){
 
-		string[] patientFName = {"Harry","John","Will","Thomas","Charlie","Boris","Dave","Mike","Steven"};
+		string[] patientFName = {"Harry","John","Will","Thomas","Charlie","Felix","Dave","Mike","Steven","Ben","Rob","Matthew"};
 
 		int randomiser = Random.Range (0, patientFName.Length);
 
@@ -33,7 +21,7 @@ public class Patient : MonoBehaviour {
 	public string getRandomLastName(){
 
 
-		string[] patientLName = {"Hobart","Smith","Dickinson","Cope","Gilder","Seddon","Swann","Dixon","Gellar","Green","Wright","Jackson","Moyes"};
+		string[] patientLName = {"Hobart","Smith","Dickinson","Cope","Gilder","Seddon","Swann","Dixon","Gellar","Green","Wright","Jackson","Moyes","Harris","Petit"};
 		
 		int randomiser = Random.Range (0, patientLName.Length);
 		
@@ -47,7 +35,7 @@ public class Patient : MonoBehaviour {
 	public int getRandomAge(){
 		
 		
-		int getAge = Random.Range (30, 75);
+		int getAge = Random.Range (26, 79);
 		
 		return getAge;
 		

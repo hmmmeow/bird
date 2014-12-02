@@ -13,7 +13,6 @@ public class PatientDetails : MonoBehaviour {
 
 	public void patientDetails()
 	{
-		//Patient myPatient = new Patient();
 		firstName = patient.getRandomFirstName();
 		lastName = patient.getRandomLastName();
 		age = patient.getRandomAge();
