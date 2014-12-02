@@ -4,11 +4,30 @@ using UnityEngine.UI;
 
 public class RetrieveClipboardText : MonoBehaviour {
 
-	public BedArea bedarea;
-	Text clipboardtext;
-	string bedNumber = "0";
+
+//	public GameObject[] bedspace;
+//	//Text clipboardtext;
+//
+//
+//	void Start ()
+//	{
+//			bedspace = GameObject.FindGameObjectsWithTag ("BedArea");
+//			string bedSpaceName = bedspace[1].guiText.text;
+//			print ("The bed space is: " + bedSpaceName);
+//		}
+//
+//
+//
+//	void Update(){
+//
+//	}
 
 
+//	public BedArea bedarea;
+//	Text clipboardtext;
+//	string bedNumber = "0";
+//
+//
 
 
 
@@ -16,18 +35,18 @@ public class RetrieveClipboardText : MonoBehaviour {
 //	{
 //		print (BedAreaNumber ());
 //	}
-
-	string ClipBoardText()
-	{
-		clipboardtext = GetComponent<Text>();
-		return clipboardtext.text;
-	}
-
-	public void BedSpaceNumber (){
-
-		//bedNumber = bedarea.getBedSpace();
-							
-		}
+//
+//	string ClipBoardText()
+//	{
+//		clipboardtext = GetComponent<Text>();
+//		return clipboardtext.text;
+//	}
+//
+//	public void BedSpaceNumber (){
+//
+//		//bedNumber = bedarea.getBedSpace();
+//							
+//		}
 
 //	void Start(){
 //		BedSpaceNumber ();
