@@ -1,14 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
+using SimpleJSON;
+using System.IO;
+
 
 public class PatientCatalogue : MonoBehaviour {
+
+	public GameObject[] bedspace;
 
 	string firstName;
 	string lastName;
 	string fullName;
 	int getAge;
 	string diagnosisName;
-	string associatedSymptoms;
+
+	string patientBio;
+	string patientDiagnosis;
+	string patientSymptoms;
+
 
 	string getRandomFirstName(){
 		string[] patientFName = {"Harry","John","Will","Thomas","Charlie","Felix","Dave","Mike","Steven","Ben","Rob","Matthew","Dennis","Brett","Joe","Justin","Lenny","Gavin"};
@@ -38,46 +47,34 @@ public class PatientCatalogue : MonoBehaviour {
 		return getAge;
 	}
 
+
 	public string getRandomDiagnosis(){
+		
+		
 		string[] patientDiagnosis = {"Squits","Hairyitis","Dendritic rash","Crumblies"};
 		int randomiser = Random.Range (0, patientDiagnosis.Length);
 		diagnosisName = patientDiagnosis[randomiser];
 		return diagnosisName;
+		
+		
 	}
 
-	// randomiser ends here
 
-//	void symptomsFromDiagnosis(){
-//
-//
-//		if  (diagnosisName == null) {
-//			associatedSymptoms = "D'oh!";
-//		}
-//
-//		// symptoms based on random diagnosis - are these classes now?
-//
-//		if  (diagnosisName == "Squits") {
-//			associatedSymptoms = "Diarrhoea";
-//		}
-//		if  (diagnosisName == "Hairyitis") {
-//			associatedSymptoms = "Itchy";
-//		}
-//		if  (diagnosisName == "Dendritic rash") {
-//			associatedSymptoms = "Itchy";
-//		}
-//		if  (diagnosisName == "Crumblies") {
-//			associatedSymptoms = "Back pain";
-//		}
-//
-//	}
+	void Start ()
+	{
+		bedspace = GameObject.FindGameObjectsWithTag("BedArea");
+		
+		for(int i = 0; i < bedspace.Length; i++)
+		{
 
-//	public string getAssociatedSymptoms(){
-//
-//		symptomsFromDiagnosis ();
-//		return associatedSymptoms;
-//				
-//	
-//	}
+			patientBio = getRandomFullName() + "\n" + getRandomAge() + " years old";
+			
+			patientDiagnosis = "Main diagnosis: " + getRandomDiagnosis();
+			
+			bedspace[i].guiText.text = patientBio + "\n" + patientDiagnosis;
+
+		}
+	}
 
 
 
