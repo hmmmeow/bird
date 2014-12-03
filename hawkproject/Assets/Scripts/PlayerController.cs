@@ -8,11 +8,13 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate()
 	{
 		var mousePosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		Quaternion rot = Quaternion.LookRotation (transform.position - mousePosition, Vector3.forward);
+
+		Quaternion rot = Quaternion.LookRotation (transform.position - mousePosition, Vector3.back);
 		transform.rotation = rot;
 
-		transform.eulerAngles = new Vector3 (0, 0, transform.eulerAngles.z-180);
-		rigidbody2D.angularVelocity = 0;
+		transform.eulerAngles = new Vector3 (0, 0, transform.eulerAngles.z);
+
+//		rigidbody2D.angularVelocity = 0;
 
 				
 	
