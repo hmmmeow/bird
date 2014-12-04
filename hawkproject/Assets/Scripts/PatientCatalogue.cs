@@ -2,7 +2,7 @@
 using System.Collections;
 using SimpleJSON;
 using System.IO;
-
+using System.Runtime.Serialization;
 
 public class PatientCatalogue : MonoBehaviour {
 
@@ -17,6 +17,8 @@ public class PatientCatalogue : MonoBehaviour {
 	string patientBio;
 	string patientDiagnosis;
 	string patientSymptoms;
+
+
 
 
 	string getRandomFirstName(){
