@@ -49,7 +49,6 @@
      <Compile Include="Assets\Scripts\BedAreaColliderZone.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Clipboard.cs" />
-     <Compile Include="Assets\Scripts\DiagnosisX.cs" />
      <Compile Include="Assets\Scripts\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\PatientCatalogue.cs" />
      <Compile Include="Assets\Scripts\PauseManager.cs" />
