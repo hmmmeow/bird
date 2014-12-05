@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <record>
+       <ID>0</ID>    
+       <Diagnosis>Squits</Diagnosis>
+       <Symptom>Diarrhoea</Symptom>
+       <Examination>Tender</Examination>
+       <Thermometer>High</Thermometer>
+       <Blood>Raised CRP</Blood>
+       <Ultrasound>Normal</Ultrasound>
+       <XR>Normal</XR>
+       <MRI>Normal</MRI>
+       <Treatment>Squitamol</Treatment>
+    </record>
+    <record>
+       <ID>1</ID>
+       <Diagnosis>Squits</Diagnosis>
+       <Symptom>Diarrhoea</Symptom>
+       <Examination>Tender</Examination>
+       <Thermometer>High</Thermometer>
+       <Blood>Raised CRP</Blood>
+       <Ultrasound>Normal</Ultrasound>
+       <XR>Normal</XR>
+       <MRI>Normal</MRI>
+       <Treatment>Squitamol</Treatment>
+    </record>
+</data-set>

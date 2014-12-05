@@ -49,11 +49,15 @@
      <Compile Include="Assets\Scripts\BedAreaColliderZone.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Clipboard.cs" />
+     <Compile Include="Assets\Scripts\DiagnosisX.cs" />
      <Compile Include="Assets\Scripts\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\PatientCatalogue.cs" />
      <Compile Include="Assets\Scripts\PauseManager.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <None Include="Assets\Resources\perls.xml" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Resources\schema.xml" />
+     <None Include="Assets\Resources\diagnosis.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Games/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

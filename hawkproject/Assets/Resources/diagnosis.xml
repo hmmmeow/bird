@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<record>
+		<ID>0</ID>
+		<Diagnosis>Squits</Diagnosis>
+		<Symptom>Diarrhoea</Symptom>
+		<Examination>Tender</Examination>
+		<Thermometer>High</Thermometer>
+		<Blood>Raised CRP</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Squitamol</Treatment>
+	</record>
+	<record>
+		<ID>1</ID>
+		<Diagnosis>Butterflitis</Diagnosis>
+		<Symptom>Diarrhoea</Symptom>
+		<Examination>Normal</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Normal</Blood>
+		<Ultrasound>Butterflies</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Amoxicitol</Treatment>
+	</record>
+	<record>
+		<ID>2</ID>
+		<Diagnosis>Bowel entanglement</Diagnosis>
+		<Symptom>Diarrhoea</Symptom>
+		<Examination>Tender</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Normal</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Entangled bowel</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Transplant</Treatment>
+	</record>
+	<record>
+		<ID>3</ID>
+		<Diagnosis>Hairyitis</Diagnosis>
+		<Symptom>Itchy</Symptom>
+		<Examination>Hairy</Examination>
+		<Thermometer>High</Thermometer>
+		<Blood>Raised CRP</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Electrolysis</Treatment>
+	</record>
+	<record>
+		<ID>4</ID>
+		<Diagnosis>Dendritic rash</Diagnosis>
+		<Symptom>Itchy</Symptom>
+		<Examination>Normal</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Normal</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Placebolin</Treatment>
+	</record>
+	<record>
+		<ID>5</ID>
+		<Diagnosis>Light liver</Diagnosis>
+		<Symptom>Itchy</Symptom>
+		<Examination>Normal</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Deranged LFTs</Blood>
+		<Ultrasound>Small liver</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Transplant</Treatment>
+	</record>
+	<record>
+		<ID>6</ID>
+		<Diagnosis>Crumblies</Diagnosis>
+		<Symptom>Back pain</Symptom>
+		<Examination>Normal</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Crumblies protein</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Tixabrufen</Treatment>
+	</record>
+	<record>
+		<ID>7</ID>
+		<Diagnosis>Spinal fusion</Diagnosis>
+		<Symptom>Back pain</Symptom>
+		<Examination>Tender</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Normal</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Fused vertebrae</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Decompression</Treatment>
+	</record>
+	<record>
+		<ID>8</ID>
+		<Diagnosis>Rakeback syndrome</Diagnosis>
+		<Symptom>Back pain</Symptom>
+		<Examination>Tender</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Normal</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Placebolin</Treatment>
+	</record>
+	<record>
+		<ID>9</ID>
+		<Diagnosis>Lockjaw</Diagnosis>
+		<Symptom>Cannot speak</Symptom>
+		<Examination>Lockjaw</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Normal</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Placebolin</Treatment>
+	</record>
+	<record>
+		<ID>10</ID>
+		<Diagnosis>Mandibilitis</Diagnosis>
+		<Symptom>Cannot speak</Symptom>
+		<Examination>Normal</Examination>
+		<Thermometer>High</Thermometer>
+		<Blood>Raised CRP</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Squitamol</Treatment>
+	</record>
+	<record>
+		<ID>11</ID>
+		<Diagnosis>Small brain anamoly</Diagnosis>
+		<Symptom>Cannot speak</Symptom>
+		<Examination>Normal</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Normal</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Half brain</MRI>
+		<Treatment>Transplant</Treatment>
+	</record>
+	<record>
+		<ID>12</ID>
+		<Diagnosis>Radiolitis</Diagnosis>
+		<Symptom>Cannot see</Symptom>
+		<Examination>Illuminates</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Raised CRP</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Amoxicitol</Treatment>
+	</record>
+	<record>
+		<ID>13</ID>
+		<Diagnosis>Eye of Cthulyitis</Diagnosis>
+		<Symptom>Cannot see</Symptom>
+		<Examination>Normal</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Raised CRP</Blood>
+		<Ultrasound>Inflammed eyes</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Electrolysis</Treatment>
+	</record>
+	<record>
+		<ID>14</ID>
+		<Diagnosis>Retinal polarisation</Diagnosis>
+		<Symptom>Cannot see</Symptom>
+		<Examination>Normal</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Polar antibodies</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Transplant</Treatment>
+	</record>
+	<record>
+		<ID>15</ID>
+		<Diagnosis>Distress syndrome</Diagnosis>
+		<Symptom>Breathless</Symptom>
+		<Examination>Agitated</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Normal</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Placebolin</Treatment>
+	</record>
+	<record>
+		<ID>16</ID>
+		<Diagnosis>Iron lung</Diagnosis>
+		<Symptom>Breathless</Symptom>
+		<Examination>Normal</Examination>
+		<Thermometer>Normal</Thermometer>
+		<Blood>Normal</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Iron lung</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Transplant</Treatment>
+	</record>
+	<record>
+		<ID>17</ID>
+		<Diagnosis>Chestdydilitis</Diagnosis>
+		<Symptom>Breathless</Symptom>
+		<Examination>Normal</Examination>
+		<Thermometer>High</Thermometer>
+		<Blood>Raised CRP</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Normal</MRI>
+		<Treatment>Amoxicitol</Treatment>
+	</record>
+	<record>
+		<ID>18</ID>
+		<Diagnosis>Plasmafied pleura</Diagnosis>
+		<Symptom>Breathless</Symptom>
+		<Examination>Normal</Examination>
+		<Thermometer>High</Thermometer>
+		<Blood>Normal</Blood>
+		<Ultrasound>Normal</Ultrasound>
+		<XR>Normal</XR>
+		<MRI>Plasma</MRI>
+		<Treatment>Decompression</Treatment>
+	</record>
+</data-set>

@@ -6,7 +6,20 @@ using System.Runtime.Serialization;
 
 public class PatientCatalogue : MonoBehaviour {
 
-	public GameObject[] bedspace;
+	public GameObject[] tagBedArea;
+	public GameObject[] tagPatientName;
+	public GameObject[] tagPatientAge;
+	public GameObject[] tagPatientAddress;
+	public GameObject[] tagPatientDiagnosis;
+	public GameObject[] tagPatientSymptom;
+	public GameObject[] tagPatientExamination;
+	public GameObject[] tagPatientBlood;
+	public GameObject[] tagPatientUs;
+	public GameObject[] tagPatientXr;
+	public GameObject[] tagPatientMri;
+	public GameObject[] tagPatientTreatment;
+
+
 
 	string firstName;
 	string lastName;
@@ -14,9 +27,17 @@ public class PatientCatalogue : MonoBehaviour {
 	int getAge;
 	string diagnosisName;
 
-	string patientBio;
+	string patientName;
+	string patientAge;
+	string patientAddress;
 	string patientDiagnosis;
-	string patientSymptoms;
+	string patientSymptom;
+	string patientExamination;
+	string patientBlood;
+	string patientUs;
+	string patientXr;
+	string patientMri;
+	string patientTreatment;
 
 
 
@@ -50,6 +71,7 @@ public class PatientCatalogue : MonoBehaviour {
 	}
 
 
+
 	public string getRandomDiagnosis(){
 		
 		
@@ -64,16 +86,53 @@ public class PatientCatalogue : MonoBehaviour {
 
 	void Start ()
 	{
-		bedspace = GameObject.FindGameObjectsWithTag("BedArea");
+		tagBedArea = GameObject.FindGameObjectsWithTag("BedArea");
+		tagPatientName = GameObject.FindGameObjectsWithTag("PatientName");
+		tagPatientAge = GameObject.FindGameObjectsWithTag("PatientAge");
+		tagPatientAddress = GameObject.FindGameObjectsWithTag("PatientAddress");
+		tagPatientDiagnosis = GameObject.FindGameObjectsWithTag("PatientDiagnosis");
+		tagPatientSymptom = GameObject.FindGameObjectsWithTag("PatientSymptom");
+		tagPatientExamination = GameObject.FindGameObjectsWithTag("PatientExamination");
+		tagPatientUs = GameObject.FindGameObjectsWithTag("PatientUs");
+		tagPatientXr = GameObject.FindGameObjectsWithTag("PatientXr");
+		tagPatientMri = GameObject.FindGameObjectsWithTag("PatientMri");
+		tagPatientTreatment = GameObject.FindGameObjectsWithTag("PatientTreatment");
+
 		
-		for(int i = 0; i < bedspace.Length; i++)
+		for(int i = 0; i < tagBedArea.Length; i++)
 		{
 
-			patientBio = getRandomFullName() + "\n" + getRandomAge() + " years old";
+			patientName = getRandomFullName();
+			patientAge = getRandomAge() + " years old";
+//			patientAddress = getRandomAddress();
+			patientDiagnosis = getRandomDiagnosis();
+//			patientSymptom = getRandomSymptom();
+//			patientExamination = getRandomExamination() ;
+//			patientBlood = getRandomBlood();
+//			patientUs = getRandomUs();
+//			patientXr = getRandomXr();
+//			patientMri = getRandomMri();
+//			patientTreatment = getRandomTreatment();
+
+
+//			patientName = getRandomFullName() + "\n" + getRandomAge() + " years old";
+//			
+//			patientDiagnosis = "Main diagnosis: " + getRandomDiagnosis();
 			
-			patientDiagnosis = "Main diagnosis: " + getRandomDiagnosis();
-			
-			bedspace[i].guiText.text = patientBio + "\n" + patientDiagnosis;
+			tagBedArea[i].guiText.text = patientName + "\n" + patientAge + "\n\n\n" + patientDiagnosis;
+			tagPatientName[i].guiText.text = patientName;
+			tagPatientAge[i].guiText.text = patientAge;
+//			tagPatientAddress[i].guiText.text = 
+			tagPatientDiagnosis[i].guiText.text = patientDiagnosis;
+//			tagPatientSymptom[i].guiText.text = 
+//			tagPatientExamination[i].guiText.text = 
+//			tagPatientUs[i].guiText.text = 
+//			tagPatientXr[i].guiText.text = 
+//			tagPatientMri[i].guiText.text = 
+//			tagPatientTreatment[i].guiText.text = 
+
+
+
 
 		}
 	}
