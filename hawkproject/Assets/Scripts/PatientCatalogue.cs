@@ -34,6 +34,7 @@ public class PatientCatalogue : MonoBehaviour {
 	string patientAge;
 	string patientHospitalNumber;
 //	string patientAddress;
+	int value; // randomise diagnosis
 	string patientDiagnosis;
 	string patientSymptom;
 	string patientExamination;
@@ -82,6 +83,7 @@ public class PatientCatalogue : MonoBehaviour {
 
 	void diagnosisX(){
 
+		int value = Random.Range (0, 18);
 
 	string[,] records = new string[19,9] {
 			{"Squits","Diarrhoea","Tender","High","Raised CRP","Normal","Normal","Normal","Squitamol"},
@@ -104,19 +106,19 @@ public class PatientCatalogue : MonoBehaviour {
 			{"Chestdydilitis","Breathless","Normal","High","Raised CRP","Normal","Normal","Normal","Amoxicitol"},
 			{"Plasmafied pleura","Breathless","Normal","High","Normal","Normal","Normal","Plasma","Decompression"}
 			};
-		
-	
-		int randomiser = Random.Range (0, 18);
 
-		patientDiagnosis = records [randomiser,0];
-		patientSymptom = records [randomiser,1];
-		patientExamination = records [randomiser,2];
-		patientThermometer = records [randomiser,3];
-		patientBlood = records [randomiser,4];
-		patientUs = records [randomiser,5];
-		patientXr = records [randomiser,6];
-		patientMri = records [randomiser,7];
-		patientTreatment = records [randomiser,8];
+			
+		patientDiagnosis = records [value,0];
+		patientSymptom = records [value,1];
+		patientExamination = records [value,2];
+		patientThermometer = records [value,3];
+		patientBlood = records [value,4];
+		patientUs = records [value,5];
+		patientXr = records [value,6];
+		patientMri = records [value,7];
+		patientTreatment = records [value,8];
+
+		return;
 		
 	}
 
@@ -156,6 +158,7 @@ public class PatientCatalogue : MonoBehaviour {
 			tagPatientAge[i].guiText.text = patientAge;
 			tagPatientHospitalNumber[i].guiText.text = patientHospitalNumber;
 //			tagPatientAddress[i].guiText.text = 
+
 
 
 			diagnosisX();
