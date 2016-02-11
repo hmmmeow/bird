@@ -5,10 +5,15 @@ using System.Collections.Generic;
 public class PatientManager : MonoBehaviour {
 
 	
-	public int totalPatients;
+	public int maxPatients;
+	public int spawnRate;
 //	int bedCount = 5;
 	public GameObject patientPrefab;
-	public List<GameObject> Patients = new List<GameObject> ();
+//	public List<GameObject> Patients = new List<GameObject> ();
+	
+	public Queue<GameObject> patientQueue = new Queue<GameObject>();
+	
+	
 	bool scriptStop = false;
 	int k = 0;
 	
@@ -17,14 +22,23 @@ public class PatientManager : MonoBehaviour {
 //		for(int k = 0; k < totalPatients; k++)
 //		{
 			GameObject patientObject = (GameObject)Instantiate(patientPrefab);
-			Patients.Add(patientObject);
+//			Patients.Add(patientObject);
+			patientQueue.Enqueue(patientObject);
 			patientObject.transform.SetParent(this.gameObject.transform, false);
 			patientObject.name = "Patient" + k;
-			Debug.Log(patientObject.name);
+			PatientData pd = patientObject.GetComponent<PatientData>();
+			pd.visitorNumber = k;
+//			Debug.Log(patientObject.name);
 			patientObject.GetComponent<Transform>().localPosition = new Vector3(0,0,0);
 //			yield return new WaitForSeconds(1f);
 			scriptStop = false;
 			k++;
+			
+//		foreach(GameObject obj in patientQueue)
+//		{
+//			Debug.Log(obj);
+//		}
+			
 //		}
 	}
 	
@@ -32,16 +46,16 @@ public class PatientManager : MonoBehaviour {
 	
 	void SpawnPatient()
 	{
-		if(Patients.Count < totalPatients && !scriptStop)
+		if(patientQueue.Count < maxPatients && !scriptStop)
 		{
 			scriptStop = true;
 			PatientCreator();
 //			Invoke("PatientCreator", 1f);
-			Invoke ("SpawnPatient", 8f);
+			Invoke ("SpawnPatient", spawnRate);
 		}
 		else
 		{
-			Invoke ("SpawnPatient", 8f);
+			Invoke ("SpawnPatient", spawnRate);
 		}
 	}
 	

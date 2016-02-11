@@ -81,31 +81,40 @@ public class UIManager : MonoBehaviour {
 		if (medicalPages[0].activeSelf)
 		{
 			medicalPages[0].SetActive(false);
+			medicalPages[1].SetActive(false);
+			medicalPages[2].SetActive(false);
+			medicalPages[3].SetActive(false);
 		} 
 
 	}
 	
 	public void BiographicsPanel()
 	{
+		if (medicalPages[1].activeSelf){CloseAllPages();}
+		else{
 		CloseAllPages();
 		medicalPages[1].SetActive(true);
-
+		}
 	}
 
 	public void DiagnosticsPages()
 	{
-		CloseAllPages();
-		medicalPages[2].SetActive(true);
-		
+		if (medicalPages[2].activeSelf){CloseAllPages();}
+		else{
+			CloseAllPages();
+			medicalPages[2].SetActive(true);
+		}
 	}
 
 	public void TreatmentPages()
 	{
-
-		CloseAllPages();
-		medicalPages[3].SetActive(true);
-
+		if (medicalPages[3].activeSelf){CloseAllPages();}
+		else{
+			CloseAllPages();
+			medicalPages[3].SetActive(true);
+		}
 	}
+	
 	
 //	public void TreatmentPages()
 //	{

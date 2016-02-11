@@ -1,13 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BedManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PatientData.cs">
     <Files>
-      <File FileName="Assets\Scripts\PatientManager.cs" Line="1" Column="19" />
-      <File FileName="Assets\Scripts\PatientZone.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PatientData.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UIManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BedManager.cs" Line="54" Column="11" />
-      <File FileName="Assets\Scripts\BedAllocation.cs" Line="1" Column="19" />
+      <File FileName="Assets\Scripts\PatientZone.cs" Line="46" Column="3" />
+      <File FileName="Assets\Scripts\PatientManager.cs" Line="30" Column="1" />
+      <File FileName="Assets\Scripts\BedManager.cs" Line="35" Column="1" />
+      <File FileName="Assets\Scripts\PatientData.cs" Line="62" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

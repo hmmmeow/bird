@@ -9,7 +9,8 @@ public class PatientData : MonoBehaviour {
 	RNGManager rng;
 
 	public bool questPatient;
-	public string visitorNumber;
+	public int visitorNumber;
+	public int assignedBedNumber;
 	public string patientName;
 	public string patientAge;
 	public string patientHospitalNumber;
@@ -29,6 +30,7 @@ public class PatientData : MonoBehaviour {
 	public int targetTimer;
 	public bool bloodTestPerformed;
 	public bool patientInBedZone;
+	public Vector3 allocatedBedVector3;
 
 	
 //	GameObject medicalRecord;
@@ -49,16 +51,16 @@ public class PatientData : MonoBehaviour {
 	}
 	
 
-	void UpdateVisitorNumber ()
-	{
-		visitorNumber = gameObject.name;
-	}
+//	void UpdateVisitorNumber ()
+//	{
+//		visitorNumber = gameObject.name;
+//	}
 	
 	void AcquirePatientData()
 	{
 		rng.getRNG ();
 		
-		Invoke("UpdateVisitorNumber",1f);
+//		Invoke("UpdateVisitorNumber",1f);
 		patientName = rng.GetArray (0);
 		patientAge = rng.GetArray (1);
 		patientHospitalNumber = rng.GetArray (2);

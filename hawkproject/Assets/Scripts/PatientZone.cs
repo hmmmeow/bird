@@ -28,9 +28,6 @@ public class PatientZone : MonoBehaviour {
 	{
 			
 		uim.medicalPages[0].SetActive(true);
-		uim.medicalPages[1].SetActive(true);
-		uim.medicalPages[2].SetActive(true);
-		uim.medicalPages[3].SetActive(true);
 		// Update patientlabels
 		
 		
@@ -48,9 +45,9 @@ public class PatientZone : MonoBehaviour {
 //		GameObject.Find("CurrentTreatmentLabel").GetComponent<Text>().text = patientData.currentTreatment;
 		
 		// Close pages
-		uim.medicalPages[1].SetActive(false);
-		uim.medicalPages[2].SetActive(false);
-		uim.medicalPages[3].SetActive(false);
+//		uim.medicalPages[1].SetActive(false);
+//		uim.medicalPages[2].SetActive(false);
+//		uim.medicalPages[3].SetActive(false);
 	}
 	
 	public void OnTriggerEnter2D(Collider2D other)
