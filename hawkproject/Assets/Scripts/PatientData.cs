@@ -85,6 +85,7 @@ public class PatientData : MonoBehaviour {
 		
 
 		patientLabel = patientName + ", " + patientAge + "\n" + patientHospitalNumber;
+		
 	}
 	
 	
@@ -92,7 +93,7 @@ public class PatientData : MonoBehaviour {
 	{
 		if(targetTimer <= 0)
 		{
-			Debug.Log("Destroyed");
+			Debug.Log("gameObject Destroyed");
 			Destroy(gameObject);
 		}
 		else if(targetTimer > 0)

@@ -46,9 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BedAllocation.cs" />
+     <Compile Include="Assets\Scripts\BedAllocation (delete).cs" />
      <Compile Include="Assets\Scripts\BedManager.cs" />
      <Compile Include="Assets\Scripts\BedZone.cs" />
+     <Compile Include="Assets\Scripts\BloodSample.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\ClockAnimator.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
@@ -58,7 +59,7 @@
      <Compile Include="Assets\Scripts\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\Matron.cs" />
      <Compile Include="Assets\Scripts\PatientData.cs" />
-     <Compile Include="Assets\Scripts\PatientDeets (delete).cs" />
+     <Compile Include="Assets\Scripts\PatientInvestigations.cs" />
      <Compile Include="Assets\Scripts\PatientManager.cs" />
      <Compile Include="Assets\Scripts\PatientZone.cs" />
      <Compile Include="Assets\Scripts\PauseManager.cs" />
@@ -69,10 +70,10 @@
      <Compile Include="Assets\Scripts\SluiceItems.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\Scripts\WashHands.cs" />
-     <None Include="Assets\Resources\perls.xml" />
+     <None Include="Assets\Archive\perls.xml" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\Resources\schema.xml" />
-     <None Include="Assets\Resources\diagnosis.xml" />
+     <None Include="Assets\Archive\schema.xml" />
+     <None Include="Assets\Archive\diagnosis.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Games/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

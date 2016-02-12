@@ -6,20 +6,22 @@ using System.Collections.Generic;
 
 public class PatientZone : MonoBehaviour {
 	
-	PatientData patientData;
-	public UIManager uim;
-
+	PatientData pd;
+	PatientInvestigations pi;
+	UIManager uim;
+	Inventory inv;
 	GameObject player;
-	
-	public bool playerInZone;
+	bool playerInZone;
 	
 	
 	void Awake()
 	{
 		player = GameObject.Find("Player1");
-		patientData = this.gameObject.GetComponent<PatientData> ();
+		pd = this.gameObject.GetComponent<PatientData> ();
+		pi = this.gameObject.GetComponent<PatientInvestigations> ();
+		inv = GameObject.FindGameObjectWithTag ("Inventory").GetComponent<Inventory> ();
 		uim = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager> ();
-//		uim.medicalPages[0].SetActive(true);
+
 	}
 	
 		
@@ -28,26 +30,14 @@ public class PatientZone : MonoBehaviour {
 	{
 			
 		uim.medicalPages[0].SetActive(true);
-		// Update patientlabels
+
+		uim.stickyLabels[0].GetComponent<Text>().text = pd.patientLabel;
+		uim.stickyLabels[1].GetComponent<Text>().text = pd.patientLabel;
+		uim.stickyLabels[2].GetComponent<Text>().text = pd.patientLabel;
+		uim.stickyLabels[3].GetComponent<Text>().text = pd.patientLabel;
+		uim.currentTreatmentLabel.GetComponent<Text>().text = pd.currentTreatment;
 		
-		
-//		uim.medicalLabels[0] = patientData.patientLabel;
-		uim.stickyLabels[0].GetComponent<Text>().text = patientData.patientLabel;
-		uim.stickyLabels[1].GetComponent<Text>().text = patientData.patientLabel;
-		uim.stickyLabels[2].GetComponent<Text>().text = patientData.patientLabel;
-		uim.stickyLabels[3].GetComponent<Text>().text = patientData.patientLabel;
-		uim.currentTreatmentLabel.GetComponent<Text>().text = patientData.currentTreatment;
-		
-//		GameObject.Find("MainLabel").GetComponent<Text>().text = patientData.patientLabel;
-//		GameObject.Find("BiographicsLabel").GetComponent<Text>().text = patientData.patientLabel;
-//		GameObject.Find("DiagnosticsLabel").GetComponent<Text>().text = patientData.patientLabel;
-//		GameObject.Find("TreatmentLabel").GetComponent<Text>().text = patientData.patientLabel;
-//		GameObject.Find("CurrentTreatmentLabel").GetComponent<Text>().text = patientData.currentTreatment;
-		
-		// Close pages
-//		uim.medicalPages[1].SetActive(false);
-//		uim.medicalPages[2].SetActive(false);
-//		uim.medicalPages[3].SetActive(false);
+
 	}
 	
 	public void OnTriggerEnter2D(Collider2D other)
@@ -55,7 +45,7 @@ public class PatientZone : MonoBehaviour {
 		if(other.gameObject == player)
 		{
 			playerInZone = true;
-			Debug.Log(patientData.patientName);
+			Debug.Log(pd.patientName);
 //			patientData = this.gameObject.GetComponentInParent<PatientData>();
 		}
 	}
@@ -69,16 +59,32 @@ public class PatientZone : MonoBehaviour {
 	
 	bool PlayerInZone() {return playerInZone;}
 	
+
+	
 	
 	void Update()
 	{
 		if(playerInZone)
 		{
-			if (Input.GetMouseButtonDown (0)) //&& !medicalRecord.gameObject.activeSelf
+			if(Input.GetMouseButtonDown (0)) //&& !medicalRecord.gameObject.activeSelf
 			{
 				OpenMedicalRecord();			
 			}
+			
+			if(Input.GetMouseButtonDown (1))
+			{
+				pi.TakeBlood();			
+			}
 		}
+		
+			if(Input.GetKeyDown(KeyCode.Delete))
+			{
+				if(inv.Items[0].itemObj != null)
+				{
+					Destroy(inv.Items[0].itemObj);
+				}
+				inv.Items[0] = new Item();
+			}
 		
 		
 	}

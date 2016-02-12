@@ -7,6 +7,7 @@ public class PatientManager : MonoBehaviour {
 	
 	public int maxPatients;
 	public int spawnRate;
+	public GameObject spawnLocation;
 //	int bedCount = 5;
 	public GameObject patientPrefab;
 //	public List<GameObject> Patients = new List<GameObject> ();
@@ -22,14 +23,15 @@ public class PatientManager : MonoBehaviour {
 //		for(int k = 0; k < totalPatients; k++)
 //		{
 			GameObject patientObject = (GameObject)Instantiate(patientPrefab);
-//			Patients.Add(patientObject);
+							
 			patientQueue.Enqueue(patientObject);
 			patientObject.transform.SetParent(this.gameObject.transform, false);
 			patientObject.name = "Patient" + k;
+			
 			PatientData pd = patientObject.GetComponent<PatientData>();
 			pd.visitorNumber = k;
 //			Debug.Log(patientObject.name);
-			patientObject.GetComponent<Transform>().localPosition = new Vector3(0,0,0);
+			patientObject.GetComponent<Transform>().localPosition = spawnLocation.transform.localPosition; // Vector3(0,0,0)
 //			yield return new WaitForSeconds(1f);
 			scriptStop = false;
 			k++;

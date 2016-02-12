@@ -47,10 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Plugins\SimpleJSON.cs" />
-     <None Include="Assets\Resources\perls.xml" />
+     <None Include="Assets\Archive\perls.xml" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\Resources\schema.xml" />
-     <None Include="Assets\Resources\diagnosis.xml" />
+     <None Include="Assets\Archive\schema.xml" />
+     <None Include="Assets\Archive\diagnosis.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Games/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

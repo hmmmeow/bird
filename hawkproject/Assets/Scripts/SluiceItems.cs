@@ -57,6 +57,10 @@ public class SluiceItems: MonoBehaviour
 				if (hit.collider.gameObject.name == "Defibrillator") {
 					inventory.addItem(4);
 				}
+				
+				if (hit.collider.gameObject.name == "Syringe") {
+					inventory.addItem(6);
+				}
 			}
 		}
 	}

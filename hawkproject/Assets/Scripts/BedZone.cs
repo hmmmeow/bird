@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class BedZone : MonoBehaviour {
 
-	PatientData patientData;
+//	PatientData patientData;
 
-	GameObject assignedPatient;
+//	GameObject assignedPatient;
 
 
 
-	bool inBedarea;
+//	bool inBedarea;
 
 
 	void Awake(){
@@ -30,22 +30,22 @@ public class BedZone : MonoBehaviour {
 
 
 
-	public void OnTriggerEnter2D(Collider2D other)
-		{
-			if(other.gameObject == assignedPatient)
-			{
-			inBedarea = true;
-			}
-		}
-	public void OnTriggerExit2D(Collider2D other)
-	{
-		if(other.gameObject == assignedPatient)
-		{
-			inBedarea = false;
-		}
-	}
+//	public void OnTriggerEnter2D(Collider2D other)
+//		{
+//			if(other.gameObject == assignedPatient)
+//			{
+//			inBedarea = true;
+//			}
+//		}
+//	public void OnTriggerExit2D(Collider2D other)
+//	{
+//		if(other.gameObject == assignedPatient)
+//		{
+//			inBedarea = false;
+//		}
+//	}
 
-	public bool BedAreaCheck() {return inBedarea;}
+//	public bool BedAreaCheck() {return inBedarea;}
 
 
 	void Update()

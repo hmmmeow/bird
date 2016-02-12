@@ -8,7 +8,7 @@ public class Inventory : MonoBehaviour {
 	public List<GameObject> Slots = new List<GameObject> ();
 	public List<Item> Items = new List<Item> ();
 	public GameObject slots;
-	ItemDatabase database;
+	ItemDatabase db;
 	int hotkey;
 //	UIManager uim;
 //	int x = -160;
@@ -41,7 +41,7 @@ public class Inventory : MonoBehaviour {
 	// Use this for initialization
 	void Awake ()
 		{
-			database = GameObject.FindGameObjectWithTag ("ItemDatabase").GetComponent<ItemDatabase>();
+			db = GameObject.FindGameObjectWithTag ("ItemDatabase").GetComponent<ItemDatabase>();
 //			uim = GameObject.FindGameObjectWithTag ("UIManager").GetComponent<UIManager>();
 			CreateHotbar ();
 			addItem (0);
@@ -122,11 +122,11 @@ public class Inventory : MonoBehaviour {
 
 	public void addItem(int itemid)
 	{
-		for (int i = 0; i < database.items.Count; i++)
+		for (int i = 0; i < db.items.Count; i++)
 		{
-			if(database.items[i].itemID == itemid)
+			if(db.items[i].itemID == itemid)
 			{
-				Item item = database.items[i];
+				Item item = db.items[i];
 				addItemIfEmpty(item);
 				break;
 			}
@@ -134,7 +134,7 @@ public class Inventory : MonoBehaviour {
 	}
 
 
-	void addItemIfEmpty(Item item)
+	public void addItemIfEmpty(Item item)
 	{
 		for (int k = 0; k < Items.Count; k++)
 		{
