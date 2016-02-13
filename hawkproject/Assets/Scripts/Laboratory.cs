@@ -59,7 +59,8 @@ public class Laboratory : MonoBehaviour {
 			BloodSample bs = bloodQueue.Peek().GetComponent<BloodSample>();
 			string analysis = bs.visitorName + " (" + bs.hospitalID + "): " + bs.bloodresult + "\n";
 			bloodList.Add (analysis);
-			bloodQueue.Dequeue();
+			Destroy(bloodQueue.Dequeue());
+//			bloodQueue.Dequeue();
 			
 			allBloodResults = "Blood Results: " + "\n";
 			if(bloodList.Count > 3)

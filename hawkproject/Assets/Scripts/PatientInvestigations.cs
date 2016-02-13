@@ -5,12 +5,14 @@ public class PatientInvestigations : MonoBehaviour {
 
 	PatientData pd;
 	Inventory inv;
+	public Transform bloodTransform;
 	public GameObject bloodsamplePrefab;
 	
 	void Awake ()
 	{
 		pd = this.gameObject.GetComponent<PatientData> ();
 		inv = GameObject.FindGameObjectWithTag ("Inventory").GetComponent<Inventory> ();
+		bloodTransform = GameObject.FindGameObjectWithTag ("Blood").transform;
 	}
 	
 	public void TakeBlood()
@@ -22,7 +24,7 @@ public class PatientInvestigations : MonoBehaviour {
 			inv.Items[0] = new Item (); //set hotbar slot 0 to empty
 			
 			GameObject bloodGameobject = (GameObject)Instantiate(bloodsamplePrefab);
-			bloodGameobject.transform.SetParent(this.gameObject.transform, false);
+			bloodGameobject.transform.SetParent(bloodTransform, false); //this.gameObject.transform
 			bloodGameobject.name = "BloodSample" + pd.visitorNumber;
 			Item item = new Item(-1, "Blood", "Some thick red stuff.", pd.visitorNumber, bloodGameobject);
 			
