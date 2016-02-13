@@ -26,9 +26,11 @@ public class PatientData : MonoBehaviour {
 	public string correctTreatment;
 	public string currentTreatment;
 	public bool patientDead;
+	public bool patientCured;
+	public int health;
 	public int deathTimer;
 	public int targetTimer;
-	public bool bloodTestPerformed;
+	
 	public bool patientInBedZone;
 	public Vector3 allocatedBedVector3;
 
@@ -76,9 +78,11 @@ public class PatientData : MonoBehaviour {
 		currentTreatment = "No treatment";
 		questPatient = false;
 		patientDead = false;
+		patientCured = false;
+		health = 2;
 		deathTimer = 20000;
 		targetTimer = 200;
-		bloodTestPerformed = false;
+		
 		patientInBedZone = false;
 //		patientPositionX = gameObject.transform.position.x;
 //		patientPositionY = gameObject.transform.position.y;

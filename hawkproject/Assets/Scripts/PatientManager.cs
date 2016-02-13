@@ -48,7 +48,7 @@ public class PatientManager : MonoBehaviour {
 	
 	void SpawnPatient()
 	{
-		if(patientQueue.Count < maxPatients && !scriptStop)
+		if(k < maxPatients && !scriptStop)
 		{
 			scriptStop = true;
 			PatientCreator();

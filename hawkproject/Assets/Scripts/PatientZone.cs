@@ -8,6 +8,7 @@ public class PatientZone : MonoBehaviour {
 	
 	PatientData pd;
 	PatientInvestigations pi;
+	PatientTreatment pt;
 	UIManager uim;
 	Inventory inv;
 	GameObject player;
@@ -19,6 +20,7 @@ public class PatientZone : MonoBehaviour {
 		player = GameObject.Find("Player1");
 		pd = this.gameObject.GetComponent<PatientData> ();
 		pi = this.gameObject.GetComponent<PatientInvestigations> ();
+		pt = this.gameObject.GetComponent<PatientTreatment> ();
 		inv = GameObject.FindGameObjectWithTag ("Inventory").GetComponent<Inventory> ();
 		uim = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager> ();
 
@@ -63,7 +65,7 @@ public class PatientZone : MonoBehaviour {
 	
 	void Update()
 	{
-		if(playerInZone)
+		if(playerInZone && !pd.patientDead)
 		{
 			if(Input.GetMouseButtonDown (0)) //&& !medicalRecord.gameObject.activeSelf
 			{
@@ -72,18 +74,19 @@ public class PatientZone : MonoBehaviour {
 			
 			if(Input.GetMouseButtonDown (1))
 			{
-				pi.TakeBlood();			
+				pi.TakeBlood();
+				pt.HasTreatment();			
 			}
 		}
 		
-			if(Input.GetKeyDown(KeyCode.Delete))
+		if(Input.GetKeyDown(KeyCode.Delete))
+		{
+			if(inv.Items[0].itemObj != null)
 			{
-				if(inv.Items[0].itemObj != null)
-				{
-					Destroy(inv.Items[0].itemObj);
-				}
-				inv.Items[0] = new Item();
+				Destroy(inv.Items[0].itemObj);
 			}
+			inv.Items[0] = new Item();
+		}
 		
 		
 	}

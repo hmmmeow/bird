@@ -63,7 +63,7 @@ public class Laboratory : MonoBehaviour {
 //			bloodQueue.Dequeue();
 			
 			allBloodResults = "Blood Results: " + "\n";
-			if(bloodList.Count > 3)
+			if(bloodList.Count > 8)
 			{
 				bloodList.RemoveAt(0);
 //				bloodList.Clear();
