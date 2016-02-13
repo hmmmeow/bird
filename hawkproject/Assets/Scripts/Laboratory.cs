@@ -62,18 +62,19 @@ public class Laboratory : MonoBehaviour {
 			bloodQueue.Dequeue();
 			
 			allBloodResults = "Blood Results: " + "\n";
-			if(bloodList.Count > 10)
+			if(bloodList.Count > 3)
 			{
-				bloodList.Clear();
+				bloodList.RemoveAt(0);
+//				bloodList.Clear();
 			}
-			for(int i = 0; i < bloodList.Count; i++)
+			for(int i = bloodList.Count-1; 0 <= i; i--)
 			{
 				allBloodResults = allBloodResults + bloodList[i];
 			}
 			uim.computerScreenText.GetComponent<Text>().text = allBloodResults;
 		}
 		yield return new WaitForSeconds(delay);
-		StartCoroutine(AnalyseBlood(10f));		
+		StartCoroutine(AnalyseBlood(10f));
 	}
 	
 	
