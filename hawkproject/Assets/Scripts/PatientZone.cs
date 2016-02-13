@@ -36,8 +36,7 @@ public class PatientZone : MonoBehaviour {
 		uim.stickyLabels[2].GetComponent<Text>().text = pd.patientLabel;
 		uim.stickyLabels[3].GetComponent<Text>().text = pd.patientLabel;
 		uim.currentTreatmentLabel.GetComponent<Text>().text = pd.currentTreatment;
-		
-
+	
 	}
 	
 	public void OnTriggerEnter2D(Collider2D other)
@@ -45,7 +44,7 @@ public class PatientZone : MonoBehaviour {
 		if(other.gameObject == player)
 		{
 			playerInZone = true;
-			Debug.Log(pd.patientName);
+//			Debug.Log(pd.patientName);
 //			patientData = this.gameObject.GetComponentInParent<PatientData>();
 		}
 	}

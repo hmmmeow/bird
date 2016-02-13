@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BedAllocation (delete).cs" />
      <Compile Include="Assets\Scripts\BedManager.cs" />
      <Compile Include="Assets\Scripts\BedZone.cs" />
      <Compile Include="Assets\Scripts\BloodSample.cs" />
@@ -56,8 +55,10 @@
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\ItemDatabase.cs" />
      <Compile Include="Assets\Scripts\KeyPickup.cs" />
+     <Compile Include="Assets\Scripts\Laboratory.cs" />
      <Compile Include="Assets\Scripts\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\Matron.cs" />
+     <Compile Include="Assets\Scripts\PCTerminal.cs" />
      <Compile Include="Assets\Scripts\PatientData.cs" />
      <Compile Include="Assets\Scripts\PatientInvestigations.cs" />
      <Compile Include="Assets\Scripts\PatientManager.cs" />

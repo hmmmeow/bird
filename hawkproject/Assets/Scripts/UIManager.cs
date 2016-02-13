@@ -14,6 +14,8 @@ public class UIManager : MonoBehaviour {
 	public GameObject[] stickyLabels;
 //	public List<GameObject> medicalLabels = new List<GameObject> ();
 	public GameObject currentTreatmentLabel;
+	public GameObject computerScreen;
+	public GameObject computerScreenText;
 	
 //	PatientData patientData;
 
@@ -45,22 +47,8 @@ public class UIManager : MonoBehaviour {
 		medicalPages[1].SetActive(false);
 		medicalPages[2].SetActive(false);
 		medicalPages[3].SetActive(false);
-		
-		
-		
-//		mainLabel = GameObject.Find("MainLabel").GetComponent<Text>().text;
-//		biographicsLabel = GameObject.Find("BiographicsLabel").GetComponent<Text>().text;
-//		diagnosticsLabel = GameObject.Find("DiagnosticsLabel").GetComponent<Text>().text;
-//		treatmentLabel = GameObject.Find("TreatmentLabel").GetComponent<Text>().text;
-//		currentTreatmentLabel = GameObject.Find("CurrentTreatmentLabel").GetComponent<Text>().text;
-		
-//		medicalLabels.Add (mainLabel);
-//		medicalLabels.Add (biographicsLabel);
-//		medicalLabels.Add (diagnosticsLabel);
-//		medicalLabels.Add (treatmentLabel);
-//		medicalLabels.Add (currentTreatmentLabel);
-//		
 
+		computerScreen.SetActive(false);
 		pauseMenu.SetActive (false);
 		
 	}
@@ -86,6 +74,15 @@ public class UIManager : MonoBehaviour {
 			medicalPages[3].SetActive(false);
 		} 
 
+	}
+	
+	public void CloseComputer()
+	{
+		if (computerScreen.activeSelf)
+		{
+			computerScreen.SetActive(false);
+		} 
+		
 	}
 	
 	public void BiographicsPanel()
